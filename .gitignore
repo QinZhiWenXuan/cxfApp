@@ -1,0 +1,13 @@
+.settings
+.classpath
+.project
+.class
+.log
+.war
+.gif
+.jpg
+.png
+
+/target
+/clientApp/target
+/serverApp/target

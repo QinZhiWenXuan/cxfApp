@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	<!-- 发布 -->
+	<bean id="weatherService"
+		class="com.byhealth.xuan.wen.qin.cxf.server.ws.impl.WeatherServiceImpl" />
+	<jaxws:endpoint id="weatherServiceWS" implementor="#weatherService"
+		address="/weatherServer" />
+	<bean id="cityService"
+		class="com.byhealth.xuan.wen.qin.cxf.server.ws.impl.CityServiceImpl" />
+	<jaxws:endpoint id="cityServiceWS" implementor="#cityService"
+		address="/cityServer" />
+	<bean id="userService"
+		class="com.byhealth.xuan.wen.qin.cxf.server.ws.impl.UserServiceImpl" />
+	<jaxws:endpoint id="userServiceWS" implementor="#userService"
+		address="/userServer" />
+</beans>

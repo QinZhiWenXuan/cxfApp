@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- START SNIPPET: beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	<!-- 暴露 -->
+	<jaxws:client id="weatherServiceCilent"
+		serviceClass="com.byhealth.xuan.wen.qin.cxf.server.ws.WeatherService"
+		address="http://localhost:8080/serverApp/cxf/weatherServer" />
+	<jaxws:client id="cityServiceCilent"
+		serviceClass="com.byhealth.xuan.wen.qin.cxf.server.ws.CityService"
+		address="http://localhost:8080/serverApp/cxf/cityServer" />
+	<jaxws:client id="userServiceCilent"
+		serviceClass="com.byhealth.xuan.wen.qin.cxf.server.ws.UserService"
+		address="http://localhost:8080/serverApp/cxf/userServer" />
+</beans>
+<!-- END SNIPPET: beans -->
